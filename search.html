@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Users</title>
+  <link rel="stylesheet" href="search.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Find People</h1>
+    </header>
+    
+    <main class="main-content">
+      <!-- Search Box -->
+      <div class="search-section">
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search users" />
+          <button id="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+        <p class="search-hint">Enter at least 3 characters to search</p>
+      </div>
+      
+      <!-- Search Filters -->
+      <div class="search-filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Creators</button>
+        <button class="filter-btn">Friends</button>
+        <button class="filter-btn">Popular</button>
+      </div>
+      
+      <!-- Search Results -->
+      <div class="search-results">
+        <h2>Popular Users</h2>
+        
+        <div class="user-list">
+          <!-- User Card 1 -->
+          <div class="user-card">
+            <div class="user-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="user-info">
+              <h3>Jessica Williams</h3>
+              <p class="username">@jessicaw</p>
+              <p class="user-stats">1.2M followers</p>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          
+          <!-- User Card 2 -->
+          <div class="user-card">
+            <div class="user-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="user-info">
+              <h3>Michael Johnson</h3>
+              <p class="username">@michaelj</p>
+              <p class="user-stats">845K followers</p>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          
+          <!-- User Card 3 -->
+          <div class="user-card">
+            <div class="user-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="user-info">
+              <h3>Sarah Thompson</h3>
+              <p class="username">@saraht</p>
+              <p class="user-stats">623K followers</p>
+            </div>
+            <button class="follow-btn following">Following</button>
+          </div>
+          
+          <!-- User Card 4 -->
+          <div class="user-card">
+            <div class="user-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="user-info">
+              <h3>David Rodriguez</h3>
+              <p class="username">@davidr</p>
+              <p class="user-stats">1.5M followers</p>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          
+          <!-- User Card 5 -->
+          <div class="user-card">
+            <div class="user-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="user-info">
+              <h3>Emily Chen</h3>
+              <p class="username">@emilyc</p>
+              <p class="user-stats">932K followers</p>
+            </div>
+            <button class="follow-btn following">Following</button>
+          </div>
+        </div>
+      </div>
+    </main>
+<!-- Bottom Navigation Bar -->
+<nav class="bottom-nav">
+  <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+  <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+  <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+  <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notifications"></a>
+  <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+  <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+</nav>
+
+</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

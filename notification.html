@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="notification.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Notifications</h1>
+      <div class="header-actions">
+        <button class="mark-read-btn">Mark all as read</button>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <div class="notifications-container">
+        <!-- Empty State -->
+        <div class="empty-state">
+          <div class="empty-icon">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 15H16" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 9H9.01" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 9H15.01" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>No notifications yet</h2>
+          <p>When you get notifications, they'll appear here</p>
+          <button class="refresh-btn">Refresh</button>
+        </div>
+        
+        <!-- Sample Notifications (Hidden by default, shown for demonstration) -->
+        <div class="notifications-list" style="display: none;">
+          <!-- Notification Item -->
+          <div class="notification-item unread">
+            <div class="notification-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="notification-content">
+              <p><strong>Jessica Williams</strong> liked your photo</p>
+              <span class="notification-time">2 minutes ago</span>
+            </div>
+            <div class="notification-action">
+              <div class="unread-indicator"></div>
+            </div>
+          </div>
+          
+          <!-- Notification Item -->
+          <div class="notification-item">
+            <div class="notification-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="notification-content">
+              <p><strong>Michael Johnson</strong> started following you</p>
+              <span class="notification-time">1 hour ago</span>
+            </div>
+          </div>
+          
+          <!-- Notification Item -->
+          <div class="notification-item">
+            <div class="notification-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="notification-content">
+              <p><strong>Sarah Thompson</strong> commented on your post: "Amazing photo!"</p>
+              <span class="notification-time">3 hours ago</span>
+            </div>
+          </div>
+          
+          <!-- Notification Item -->
+          <div class="notification-item">
+            <div class="notification-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="notification-content">
+              <p><strong>David Rodriguez</strong> mentioned you in a comment</p>
+              <span class="notification-time">Yesterday</span>
+            </div>
+          </div>
+          
+          <!-- Notification Item -->
+          <div class="notification-item">
+            <div class="notification-avatar">
+              <img src="user.jpg" alt="User Avatar">
+            </div>
+            <div class="notification-content">
+              <p><strong>Emily Chen</strong> sent you a message</p>
+              <span class="notification-time">2 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+   <!-- Bottom Navigation Bar -->
+   <nav class="bottom-nav">
+    <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+    <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+    <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+    <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notifications"></a>
+    <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+    <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+  </nav>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

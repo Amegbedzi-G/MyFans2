@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="form.html" class="back-link">&larr; Back to Home</a>
+      <h1>Forgot Password</h1>
+    </div>
+    <div class="form-container">
+      <h2>Reset Your Password</h2>
+      <p>Enter your email address and we'll send you a link to reset your password.</p>
+      <form action="#" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        <span class="error-message">Email is required</span>
+        <button type="submit" class="submit-btn">Send Reset Link</button>
+      </form>
+    </div>
+  </div>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  color: green;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.error-message {
+  font-size: 12px;
+  color: green;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background-color: #a9543c;
+}
+
+  </style>
+</body>
+</html>

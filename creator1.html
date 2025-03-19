@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Settings</title>
+    <link href="profile.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"> <!-- Box/container div -->
+        <h2>SETTINGS</h2>
+
+        <!-- Tab navigation -->
+        <div class="tabs">
+            <a href="profile.html"><button class="tab" id="account-tab">Account</button></a>
+            <a href="creator1.html"><button class="tab active" id="creator-tab">Creator</button></a>
+        </div>
+
+        <!-- Creator Settings Form Container -->
+        <div class="settings-container">
+            <div class="creator-info">
+                <h3>Creator Settings</h3>
+                <p>Unlock creator features to customize your profile and set subscription options.</p>
+                <br>
+                <div class="creator-box"> <!-- Box container -->
+                    <p> ⭐ Become a creator</p>
+                    <p>Unlock exclusive features and start monetizing your content by becoming a creator.</p>
+                    
+                    <!-- Become a Creator Button -->
+                    <div class="become-creator">
+                        <button class="become-creator-button">Become a Creator</button>
+                    </div>
+                </div>
+                
+
+                <!-- Preview Profile Toggle -->
+                <div class="form-group toggle">
+                    <label for="preview-profile">Preview Profile to Visitors</label>
+                    <label class="switch">
+                        <input type="checkbox" id="preview-profile">
+                        <span class="slider"></span>
+                    </label>
+                    <br><br>
+                    <span class="toggle-text">Enable this to allow non-subscribers to preview your profile.</span>
+                </div>
+
+                <!-- Subscription Price -->
+                <div class="form-group">
+                    <label for="subscription-price">Subscription Price</label>
+                    <input type="number" id="subscription-price" placeholder="Your subscription price">
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Your bio description, explain what you do and why people should subscribe to you."></textarea>
+                </div>
+
+                <!-- Calling Rate Per Minute -->
+                <div class="form-group">
+                    <label for="calling-rate">Calling Rate Per Minute</label>
+                    <input type="number" id="calling-rate" placeholder="Your calling rate per minute">
+                </div>
+
+                <!-- Save Changes Button -->
+                <button class="save-button" onclick="saveChanges()">Save Changes</button>
+            </div>
+        </div>
+    </div> <!-- End of Box/Container div -->
+
+    <script>
+        // JavaScript for toggling tabs if necessary
+        document.getElementById('creator-tab').addEventListener('click', function() {
+            document.getElementById('creator-tab').classList.add('active');
+            document.getElementById('account-tab').classList.remove('active');
+        });
+
+        document.getElementById('account-tab').addEventListener('click', function() {
+            document.getElementById('account-tab').classList.add('active');
+            document.getElementById('creator-tab').classList.remove('active');
+        });
+
+        // Function to save the changes
+        function saveChanges() {
+            // Get values from form
+            const previewProfile = document.getElementById('preview-profile').checked;
+            const subscriptionPrice = document.getElementById('subscription-price').value;
+            const description = document.getElementById('description').value;
+            const callingRate = document.getElementById('calling-rate').value;
+
+            // Validate input fields (for example, ensure subscription price and calling rate are numeric)
+            if (!subscriptionPrice || !callingRate) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            // Simulate sending data to the server (here we're just logging the data)
+            console.log("Settings Saved:");
+            console.log("Preview Profile: " + previewProfile);
+            console.log("Subscription Price: $" + subscriptionPrice);
+            console.log("Description: " + description);
+            console.log("Calling Rate: $" + callingRate + " per minute");
+
+            // Show success message (You could redirect to another page or display a confirmation)
+            alert("Your changes have been saved successfully.");
+        }
+    </script>
+
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%; /* Full height */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 10px;
+            
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        /* Tab Styles */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: #6fb97f;
+            color: #fff;
+        }
+
+        /* Settings container */
+        .settings-container {
+            width: 100%;
+            flex-grow: 1;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+
+        }
+
+        /* Creator Information Section */
+        .creator-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .creator-info p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .become-creator {
+            margin-bottom: 20px;
+        }
+
+        .become-creator-button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .become-creator-button:hover {
+            background-color: #ff5722;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .toggle-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: white;
+            transition: .4s;
+            left: 4px;
+            bottom: 4px;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+
+        /* Save Button */
+        .save-button {
+            background-color: #6fb97f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Hover effects */
+        .save-button:hover {
+            background-color: #5a9e6b;
+        }
+        /* Update the toggle class to stack elements vertically */
+.toggle {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+/* Style the toggle text to ensure it stays on a separate line */
+.toggle-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px; /* Add space between the checkbox and the text */
+}
+    </style>
+            <!-- Bottom Navigation Bar -->
+ <nav class="bottom-nav">
+    <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+    <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+    <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+    <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notification"></a>
+    <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+    <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+</nav>
+<style>
+      /* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Ensures it starts from the left edge */
+  width: 100%; /* Forces it to span the full width of the viewport */
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensures it stays above other elements */
+}
+
+.nav-item img {
+  width: 24px;
+  height: 14px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.nav-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+</style>
+
+
+
+
+</body>
+</html>

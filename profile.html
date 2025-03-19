@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <h2>SETTINGS</h2>
+            <!-- Tab navigation -->
+            <div class="tabs">
+                <a href="profile.html"><button class="tab active" id="account-tab">Account</button></a>
+                <a href="creator1.html"><button class="tab" id="creator-tab">Creator</button></a>
+            </div>
+
+            <!-- Settings Form Container -->
+            <div class="settings-container">
+                <div class="account-info">
+                    <h3>Account Information</h3>
+
+                    <!-- Profile Picture -->
+                    <div class="form-group">
+                        <label for="profile-picture">Profile Picture</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="profile-picture" accept="image/*">
+                            <span class="remove-button">×</span>
+                        </div>
+                    </div>
+
+                    <!-- Cover Picture -->
+                    <div class="form-group">
+                        <label for="cover-picture">Cover Picture</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="cover-picture" accept="image/*">
+                            <span class="remove-button">×</span>
+                        </div>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" value="3klypz06">
+                    </div>
+
+                    <!-- Display Name -->
+                    <div class="form-group">
+                        <label for="display-name">Display Name</label>
+                        <input type="text" id="display-name" value="nibbm hn">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="asndn@gmail.com">
+                        <a href="#" id="forgot-password-link">Forgot your password?</a>
+                    </div>
+
+                    <!-- Save Changes Button -->
+                    <button class="save-button">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h3>Forgot Password</h3>
+            <p>Please enter your email address to receive a password reset link.</p>
+            <input type="email" id="reset-email" placeholder="Enter your email">
+            <button id="send-reset-link" class="save-button">Send Reset Link</button>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="main.html" class="nav-item">
+            <img src="home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="create.html" class="nav-item">
+            <img src="plus.png" alt="Create">
+            <span>Create</span>
+        </a>
+        <a href="search.html" class="nav-item">
+            <img src="search.png" alt="Search">
+            <span>Search</span>
+        </a>
+        <a href="notification.html" class="nav-item">
+            <img src="bell.png" alt="Notification">
+            <span>Alerts</span>
+        </a>
+        <a href="messages.html" class="nav-item">
+            <img src="message.png" alt="Messages">
+            <span>Messages</span>
+        </a>
+        <a href="setting.html" class="nav-item active">
+            <img src="setting.png" alt="Settings">
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

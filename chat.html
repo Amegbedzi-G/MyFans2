@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chat - MyFans</title>
+  <link rel="stylesheet" href="chat.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Chat Header -->
+    <header class="chat-header">
+      <button id="backButton" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <div class="user-info">
+        <img src="profile4.jpg" alt="Sarah Williams" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name-container">
+            <h2 class="user-name">Sarah Williams</h2>
+            <img src="verification.png" alt="Verified" class="verification-icon">
+          </div>
+          <span class="user-status">Online</span>
+        </div>
+      </div>
+      <div class="chat-actions">
+        <button onclick="startVoiceCall()" class="action-button">
+          <i class="fas fa-phone"></i>
+        </button>
+        <button onclick="startVideoCall()" class="action-button">
+          <i class="fas fa-video"></i>
+        </button>
+        <button class="action-button">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Chat Area -->
+    <main>
+      <!-- Sidebar (visible on desktop) -->
+      <div class="sidebar">
+        <div class="search-container">
+          <input type="text" placeholder="Search messages..." class="search-input">
+        </div>
+        <div class="chat-list">
+          <div class="chat-item active">
+            <img src="user.jpg" alt="Sarah Williams" class="chat-avatar">
+            <div class="chat-preview">
+              <div class="chat-name-row">
+                <h3>Sarah Williams</h3>
+                <span class="chat-time">Now</span>
+              </div>
+              <p class="chat-last-message">Hey, how's it going?</p>
+            </div>
+          </div>
+          <div class="chat-item">
+            <img src="user.jpg" alt="Jane Doe" class="chat-avatar">
+            <div class="chat-preview">
+              <div class="chat-name-row">
+                <h3>Jane Doe</h3>
+                <span class="chat-time">1h</span>
+              </div>
+              <p class="chat-last-message">Let's catch up soon!</p>
+            </div>
+          </div>
+          <div class="chat-item">
+            <img src="user.jpg" alt="Michael Johnson" class="chat-avatar">
+            <div class="chat-preview">
+              <div class="chat-name-row">
+                <h3>Michael Johnson</h3>
+                <span class="chat-time">3h</span>
+              </div>
+              <p class="chat-last-message">Thanks for the photos!</p>
+            </div>
+          </div>
+          <div class="chat-item">
+            <img src="user.jpg" alt="Emily Chen" class="chat-avatar">
+            <div class="chat-preview">
+              <div class="chat-name-row">
+                <h3>Emily Chen</h3>
+                <span class="chat-time">Tue</span>
+              </div>
+              <p class="chat-last-message">I'll send you the details later</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages Area -->
+      <div class="messages-area">
+        <div id="messages" class="messages">
+          <!-- Date Separator -->
+          <div class="date-separator">
+            <span>Today</span>
+          </div>
+          
+          <!-- Received Message -->
+          <div class="message received">
+            <img src="user.jpg" alt="Sarah" class="message-avatar">
+            <div class="message-content">
+              <p>Hey there! How are you doing today?</p>
+              <span class="timestamp">10:30 AM</span>
+            </div>
+          </div>
+          
+          <!-- Sent Message -->
+          <div class="message sent">
+            <div class="message-content">
+              <p>Hi Sarah! I'm doing great, thanks for asking. Just finished a new post that I'm really excited about.</p>
+              <span class="timestamp">10:32 AM</span>
+            </div>
+          </div>
+          
+          <!-- Received Message -->
+          <div class="message received">
+            <img src="user.jpg" alt="Sarah" class="message-avatar">
+            <div class="message-content">
+              <p>That sounds awesome! Can't wait to see it. What's it about?</p>
+              <span class="timestamp">10:33 AM</span>
+            </div>
+          </div>
+          
+          <!-- Sent Message -->
+          <div class="message sent">
+            <div class="message-content">
+              <p>It's a behind-the-scenes look at my creative process. I included some tips and tricks that I think my followers will find helpful.</p>
+              <span class="timestamp">10:35 AM</span>
+            </div>
+          </div>
+          
+          <!-- Received Message with Image -->
+          <div class="message received">
+            <img src="user.jpg" alt="Sarah" class="message-avatar">
+            <div class="message-content">
+              <p>That's exactly what people want to see! I actually just took this photo yesterday that might inspire you for your next post:</p>
+              <img src="profile3.jpg" alt="Inspiration photo" class="message-image">
+              <span class="timestamp">10:40 AM</span>
+            </div>
+          </div>
+          
+          <!-- Sent Message -->
+          <div class="message sent">
+            <div class="message-content">
+              <p>Wow, that's beautiful! Thanks for sharing. I might use a similar composition for my next shoot.</p>
+              <span class="timestamp">10:42 AM</span>
+            </div>
+          </div>
+          
+          <!-- Received Message -->
+          <div class="message received">
+            <img src="user.jpg" alt="Sarah" class="message-avatar">
+            <div class="message-content">
+              <p>Glad you like it! By the way, are you going to the creator meetup next weekend?</p>
+              <span class="timestamp">10:45 AM</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Voice Recording Section (hidden by default) -->
+        <div id="voiceRecordingSection" class="voice-recording-section">
+          <div class="recording-indicator">
+            <i class="fas fa-microphone-alt recording-icon"></i>
+            <span class="recording-time">0:00</span>
+          </div>
+          <button onclick="stopVoiceRecording()" class="stop-recording-btn">
+            <i class="fas fa-stop"></i>
+          </button>
+        </div>
+        
+        <!-- Message Input Area -->
+        <div class="message-input-area">
+          <button class="attachment-btn">
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="attachment-menu">
+            <button onclick="document.getElementById('imageInput').click()">
+              <i class="fas fa-image"></i> Photo
+            </button>
+            <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="sendImage(event)">
+            <button onclick="startVoiceRecording()">
+              <i class="fas fa-microphone"></i> Voice
+            </button>
+          </div>
+          <div class="input-container">
+            <textarea id="messageBox" placeholder="Type a message..." rows="1"></textarea>
+          </div>
+          <button onclick="sendMessage()" class="send-button">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>

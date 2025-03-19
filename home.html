@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFans - Connect with Creators</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <h2 class="brand-name">MyFans</h2>
+    </div>
+
+  
+
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#your-potential">Your Potential</a></li>
+        <li><a href="#your-creators">Creators</a></li>
+        <li><a href="#Philosophy">Philosophy</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-buttons">
+      <!-- Language Dropdown -->
+      <div class="lang-selector">
+        <button class="lang-toggle" aria-label="Change language">🌍</button>
+        <div class="language-dropdown">
+          <ul>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Spanish</a></li>
+            <li><a href="#">French</a></li>
+            <li><a href="#">German</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Sign In/Sign Up Button -->
+      <a href="form.html" class="btn">Sign In / Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Create,</h2>
+        <h2>Connect</h2>
+        <h2>Earn</h2>
+        <p>Connect with your favorite creators and explore exclusive content. Join MyFans and start monetizing your content.</p>
+
+        <div class="cta-buttons">
+          <a href="form.html" class="oval-link">Become a Creator</a>
+          <a href="form.html" class="oval-link">Sign Up as a Supporter</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="phone">
+          <div class="screen">
+            <div class="profile-header">
+              <img src="profile5.jpg" alt="Header Image" class="header-image">
+              <div class="profile-image-container">
+                <img src="profile3.jpg" alt="Profile Image" class="profile-image">
+              </div>
+              <div class="profile-info-header">
+                <h3>LovelyLesh</h3>
+                <p>@Lesh</p>
+              </div>
+            </div>
+            <div class="profile-content">
+              <p><strong>Last seen:</strong> 25 minutes ago</p>
+              <p>Travel vlogger, programmer, and your virtual bestie! 🌍✨</p>
+              <div class="stats">
+                <span>💜5.2K likes</span>
+                <span>👁1.6K views</span>
+              </div>
+              <div class="actions">
+                <button class="btn subscribe">Subscribed</button>
+                <button class="btn tip">Tip</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="your-potential" class="earnings-calculator">
+      <div class="calculator-container">
+        <h2>Estimate Your Potential Earnings</h2>
+        <p>Use our calculator to see how much you could earn as a creator on our platform.</p>
+        <div class="calculator">
+          <div class="slider-container">
+            <label for="followers">Total Followers Across All Platforms: <span id="followers-value">750,000</span></label>
+            <input type="range" id="followers" min="0" max="1000000" step="10000" value="750000" />
+            <small>Include your followers from all social media platforms</small>
+          </div>
+          <div class="slider-container">
+            <label for="subscription-price">Subscription Price: <span id="price-value">$5.00</span></label>
+            <input type="range" id="subscription-price" min="1" max="50" step="0.5" value="5" />
+          </div>
+          <div class="earnings-display">
+            <h3>Potential Monthly Earnings</h3>
+            <p id="earnings-range">$9.4K - $93.8K</p>
+            <small>Based on a range of between 1% to 25% of your total followers subscribing.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Creators Section -->
+    <section id="your-creators" class="creators-section">
+      <h2 class="section-title">TRUSTED BY WORLD'S TOP CREATORS</h2>
+      <div class="profiles">
+        <div class="profile-card">
+          <img src="profile1.jpg" alt="Rosallind" class="profile-img">
+          <div class="profile-info">
+            <b>Rosallind</b>
+            <p>940K followers</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="profile2.jpg" alt="Willian" class="profile-img">
+          <div class="profile-info">
+            <b>Willian</b>
+            <p>66.3K followers</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="profile3.jpg" alt="Sandra" class="profile-img">
+          <div class="profile-info">
+            <b>Sandra</b>
+            <p>295K followers</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="profile4.jpg" alt="Madison Sloan" class="profile-img">
+          <div class="profile-info">
+            <b>Madison Sloan</b>
+            <p>10.8K followers</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="profile5.jpg" alt="LovelyLesh" class="profile-img">
+          <div class="profile-info">
+            <b>LovelyLesh</b>
+            <p>1.1M followers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-highlight">
+      <div class="feature-text">
+        <h2 class="section-title">EARN MONEY FROM SUBSCRIPTIONS</h2>
+        <p>Monetize your exclusive content with subscription-based access. Set your own prices and earn steady, recurring revenue from your most dedicated supporters.</p>
+        <a href="form.html" class="oval-link">Become a Creator</a>
+      </div>
+      <div class="feature-image">
+        <div class="phone">
+          <div class="screen">
+            <div class="profile-header">
+              <img src="profile3.jpg" alt="Header Image" class="header-image">
+              <div class="profile-image-container">
+                <img src="profile2.jpg" alt="Profile Image" class="profile-image">
+              </div>
+              <div class="profile-info-header">
+                <h3>Zoe</h3>
+                <p>@zoexplores</p>
+              </div>
+            </div>
+            <div class="profile-content">
+              <p><strong>Last seen:</strong> 7 minutes ago</p>
+              <p>Travel vlogger, adventure seeker, and your virtual bestie! 🌍✨</p>
+              <div class="stats">
+                <span>💜5.2K likes</span>
+                <span>👁1.6K views</span>
+              </div>
+              <div class="actions">
+                <button class="btn subscribe">Subscribed</button>
+                <button class="btn tip">Tip</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-highlight reverse">
+      <div class="feature-text">
+        <h2 class="section-title">CONNECT WITH YOUR FOLLOWERS</h2>
+        <p>Build stronger connections through direct messaging and exclusive content. Turn casual followers into paying subscribers and boost your income.</p>
+        <a href="form.html" class="oval-link">Become a Creator</a>
+      </div>
+      <div class="feature-image">
+        <div class="phone">
+          <div class="screen">
+            <div class="profile-header">
+              <img src="head.jpeg" alt="Header Image" class="header-image">
+              <div class="profile-image-container">
+                <img src="profile1.jpg" alt="Profile Image" class="profile-image">
+              </div>
+              <div class="profile-info-header">
+                <h3>LovelyLesh</h3>
+                <p>@Lesh</p>
+              </div>
+            </div>
+            <div class="profile-content">
+              <p><strong>Last seen:</strong> 25 minutes ago</p>
+              <p>Travel vlogger, programmer, and your virtual bestie! 🌍✨</p>
+              <div class="stats">
+                <span>💜5.2K likes</span>
+                <span>👁1.6K views</span>
+              </div>
+              <div class="actions">
+                <button class="btn subscribe">Subscribed</button>
+                <button class="btn tip">Tip</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-highlight">
+      <div class="feature-text">
+        <h2 class="section-title">DIRECT MESSAGING WITH FANS</h2>
+        <p>Build stronger connections through direct messaging and exclusive content. Turn casual followers into paying subscribers and boost your income.</p>
+        <a href="form.html" class="oval-link">Become a Creator</a>
+      </div>
+      <div class="feature-image">
+        <div class="chat-phone">
+          <!-- Profile Section -->
+          <div class="chat-header">
+            <img src="profile1.jpg" alt="Profile Image" class="chat-profile-img">
+            <div>
+              <h3>Willian</h3>
+              <p>Last seen 2 hours ago</p>
+            </div>
+          </div>
+
+          <!-- Chat Section -->
+          <div class="chat-messages">
+            <!-- Exclusive Content -->
+            <div class="exclusive-content">
+              <p><strong>Exclusive Content</strong><br>Unlock for $50.99</p>
+            </div>
+            <!-- User Message -->
+            <div class="user-message">
+              <p>Just unlocked the exclusive content. The meal prep guide is fantastic!</p>
+              <span>2:40 PM</span>
+            </div>
+            <!-- Owner Message -->
+            <div class="owner-message">
+              <p>Thank you! I'm glad you're finding it helpful. Let me know if you have any questions about the recipes.</p>
+            </div>
+          </div>
+
+          <!-- Input Section -->
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message...">
+            <button>➤</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="post-section">
+      <div class="post">
+        <div class="user-info">
+          <img src="profile3.jpg" alt="User Profile" class="profile-pic">
+          <div class="user-details">
+            <h3>Rosallind Willian</h3>
+            <span>@Rosallind_willian<br>16 minutes ago</span>
+          </div>
+        </div>
+        <p class="post-text">
+          Exclusive behind-the-scenes from today's photoshoot! Unlock to see my favorite looks and get style tips. 📸✨ #WithBell
+        </p>
+        <div class="locked-content">
+          <div class="lock-icon"></div>
+          <button class="unlock-button">Unlock this media</button>
+          <p class="price">🪙3 <br> $50.00</p>
+        </div>
+        <div class="post-actions">
+          <span>💗 758</span>
+          <span>💬 132</span>
+          <span>💰 Tip</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <h2 class="section-title">Platform Features</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="icon">💬</div>
+          <h3>Direct Messaging</h3>
+          <p>Connect with your followers through private messaging, building stronger relationships and increasing engagement.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📜</div>
+          <h3>Subscriptions</h3>
+          <p>Enable your top fans to subscribe to access your exclusive content. Offer trials, discounts, and more!</p>
+        </div>
+        <div class="feature">
+          <div class="icon">💵</div>
+          <h3>Pay-per-View Content</h3>
+          <p>Monetize your content by offering pay-per-view options on your timeline, in messages, and in your content vault.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📧</div>
+          <h3>Mass Messaging</h3>
+          <p>Message all followers at once with mass messaging features, perfect for announcements or promotions.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📊</div>
+          <h3>Detailed Earnings Breakdown</h3>
+          <p>Get comprehensive insights into your earnings from subscriptions, pay-per-view content, and tips.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">⏰</div>
+          <h3>24/7 Support</h3>
+          <p>We're available around the clock to assist with any questions or issues you may encounter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Philosophy" class="philosophy-section">
+      <div class="text-content">
+        <h2 class="section-title">The MyFans Philosophy</h2>
+        <p>
+          At MyFans, we believe in empowering creators to build meaningful connections with their audience
+          while maintaining control over their content and earnings.
+        </p>
+        <p>
+          Our platform is built on the principles of creator empowerment, fair compensation, and community building.
+          We strive to provide a space where creativity thrives and creators can turn their passion into sustainable careers.
+        </p>
+      </div>
+      <div class="image-grid">
+        <div class="image-container">
+          <img src="recording-studio.jpg" alt="Person in a recording studio">
+        </div>
+        <div class="image-container">
+          <img src="streaming-creator.jpg" alt="Person live-streaming">
+        </div>
+        <div class="image-container">
+          <img src="fitness-creator.jpg" alt="Person filming fitness content">
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="faq-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq">
+          <button class="faq-btn">What is MyFans?</button>
+          <div class="faq-content">
+            <p>MyFans is a platform where creators can connect with their supporters and earn money through pledges and subscriptions.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-btn">How does MyFans help creators make money?</button>
+          <div class="faq-content">
+            <p>Creators on MyFans can earn by offering exclusive content and engaging with their audience through paid subscriptions and donations.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-btn">What kind of content can I post on MyFans?</button>
+          <div class="faq-content">
+            <p>Creators can post content like videos, photos, live streams, and other exclusive content to engage their supporters.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-btn">How is MyFans different from other social platforms?</button>
+          <div class="faq-content">
+            <p>MyFans allows creators to directly monetize their content through pledges and subscriptions, offering more control over their earnings compared to other platforms.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-btn">Who can join MyFans?</button>
+          <div class="faq-content">
+            <p>Anyone can join MyFans, whether as a creator or a supporter. Creators must be over 18 years of age to upload content.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-btn">How do I become a creator on MyFans?</button>
+          <div class="faq-content">
+            <p>Simply sign up as a creator, fill out your profile, and start sharing your content to attract supporters.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-btn">Can I collaborate with brands on MyFans?</button>
+          <div class="faq-content">
+            <p>Yes, creators can collaborate with brands to offer sponsored content or promotional posts as part of their monetization strategy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Passion into Profits?</h2>
+        <p>Join thousands of creators already using MyFans to monetize their content and build a sustainable income stream. Your audience is waiting!</p>
+        <a href="form.html" class="oval-link">Start Earning Today</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Logo and Description -->
+      <div class="footer-about">
+        <h2 class="brand-name">MyFans</h2>
+        <p>
+          Empowering creators to build, grow, and monetize their passion through social connections.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram">&#128247;</a>
+        </div>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-links">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#your-potential">Your Potential</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#your-creators">Creators</a></li>
+          <li><a href="#Philosophy">Philosophy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div class="footer-links">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2024 MyFans. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>

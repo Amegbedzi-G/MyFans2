@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top-Up Your Calling Minutes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-up-container">
+        <h1>Top-Up Your Calling Minutes</h1>
+        <p id="current-minutes">You currently have 0 minutes. Top-Up your calling minutes to make calls to your favorite creators.</p>
+        <div class="amount-options">
+            <button class="amount-option" data-amount="10">$10</button>
+            <button class="amount-option" data-amount="20">$20</button>
+            <button class="amount-option" data-amount="50">$50</button>
+            <button class="amount-option" data-amount="100">$100</button>
+            <button class="amount-option" data-amount="200">$200</button>
+        </div>
+        <button class="top-up-button" id="top-up-button">Top Up</button>
+    </div>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        text-align: center;
+    }
+    
+    .top-up-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 40px auto;
+        width:fit-content;
+    }
+    
+    h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .amount-options {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    
+    .amount-option {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 40px;
+    }
+    
+    .amount-option:hover {
+        background-color: #ddd;
+    }
+    
+    .top-up-button {
+        background-color: green;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        font-size: 48px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .top-up-button:hover {
+        background-color: green;
+    }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff;
+        border-top: 1px solid #e0e0e0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .nav-item img {
+        width: 54px;
+        height: 44px;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-item img:hover {
+        filter: grayscale(0%);
+        transform: scale(1.2);
+    }
+    </style>
+
+    <nav class="bottom-nav">
+        <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+        <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+        <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+        <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notification"></a>
+        <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+        <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+    </nav>
+
+    <script>
+// Store the current balance (could be dynamic in real use case)
+let currentMinutes = 0;
+
+// Function to update the display of minutes
+function updateMinutes() {
+    document.getElementById('current-minutes').textContent = `You currently have ${currentMinutes} minutes. Top-Up your calling minutes to make calls to your favorite creators.`;
+}
+
+// Track the selected amount
+let selectedAmount = 0;
+
+// Handle amount selection
+const amountOptions = document.querySelectorAll('.amount-option');
+amountOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        selectedAmount = parseInt(option.getAttribute('data-amount')); // Get the selected amount
+        amountOptions.forEach(opt => opt.style.backgroundColor = '#f0f0f0'); // Reset all to default color
+        option.style.backgroundColor = '#ddd'; // Highlight selected option
+        
+        // Update the <p> text with the selected amount
+        const minutesMessage = `You are about to top-up ${selectedAmount} minutes.`;
+        document.getElementById('current-minutes').textContent = minutesMessage;
+
+        // Update the button text
+        const topUpButton = document.getElementById('top-up-button');
+        topUpButton.textContent = `Top Up ${selectedAmount} Minutes`;
+    });
+});
+
+// Handle Top Up button click
+document.getElementById('top-up-button').addEventListener('click', () => {
+    if (selectedAmount === 0) {
+        alert("Please select an amount to top-up.");
+        return;
+    }
+    currentMinutes += selectedAmount;
+    updateMinutes(); // Update the displayed minutes
+    alert(`You have successfully topped up ${selectedAmount} minutes.`);
+
+    // Reset selection
+    amountOptions.forEach(opt => opt.style.backgroundColor = '#f0f0f0'); // Reset all to default color
+    selectedAmount = 0;
+    document.getElementById('top-up-button').textContent = "Top Up"; // Reset button text
+});
+
+
+    </script>
+
+</body>
+</html>

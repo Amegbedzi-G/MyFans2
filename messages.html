@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link rel="stylesheet" href="message.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <div class="content-wrapper">
+      <header class="header">
+        <h1>Messages</h1>
+        <div class="header-actions">
+          <button class="new-message-btn">
+            <i class="fas fa-edit"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search for a user..." id="searchInput">
+        <button onclick="searchUser()" class="search-btn">Search</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tab">
+        <button class="tab-btn active" onclick="filterMessages('all')">All</button>
+        <button class="tab-btn" onclick="filterMessages('unread')">Unread</button>
+        <button class="tab-btn" onclick="filterMessages('creators')">Creators</button>
+      </div>
+
+      <!-- User List -->
+      <div class="user-list">
+        <div class="user" onclick="window.location.href='chat.html?user=user1'">
+          <div class="user-avatar-container">
+            <img src="user.jpg" alt="User 1" class="user-avatar">
+            <span class="online-indicator"></span>
+          </div>
+          <div class="user-info">
+            <div class="user-name-row">
+              <h3 class="user-name">Sarah Williams</h3>
+              <img src="verification.png" alt="Verified" class="verification-icon">
+              <span class="message-time">2m</span>
+            </div>
+            <p class="last-message">Hey, how's it going? I was wondering if you'd like to meet up this weekend.</p>
+          </div>
+          <div class="message-status">
+            <span class="unread-badge">2</span>
+          </div>
+        </div>
+
+        <div class="user" onclick="window.location.href='chat.html?user=user2'">
+          <div class="user-avatar-container">
+            <img src="user.jpg" alt="User 2" class="user-avatar">
+          </div>
+          <div class="user-info">
+            <div class="user-name-row">
+              <h3 class="user-name">Jane Doe</h3>
+              <img src="verification.png" alt="Verified" class="verification-icon">
+              <span class="message-time">1h</span>
+            </div>
+            <p class="last-message">Let's catch up soon! I have some exciting news to share with you.</p>
+          </div>
+        </div>
+
+        <div class="user" onclick="window.location.href='chat.html?user=user3'">
+          <div class="user-avatar-container">
+            <img src="user.jpg" alt="User 3" class="user-avatar">
+            <span class="online-indicator"></span>
+          </div>
+          <div class="user-info">
+            <div class="user-name-row">
+              <h3 class="user-name">Michael Johnson</h3>
+              <span class="message-time">3h</span>
+            </div>
+            <p class="last-message">Thanks for the photos! They look amazing.</p>
+          </div>
+          <div class="message-status">
+            <span class="unread-badge">5</span>
+          </div>
+        </div>
+
+        <div class="user" onclick="window.location.href='chat.html?user=user4'">
+          <div class="user-avatar-container">
+            <img src="user.jpg" alt="User 4" class="user-avatar">
+          </div>
+          <div class="user-info">
+            <div class="user-name-row">
+              <h3 class="user-name">Emily Chen</h3>
+              <img src="verification.png" alt="Verified" class="verification-icon">
+              <span class="message-time">Tue</span>
+            </div>
+            <p class="last-message">I'll send you the details for the event later today.</p>
+          </div>
+        </div>
+
+        <div class="user" onclick="window.location.href='chat.html?user=user5'">
+          <div class="user-avatar-container">
+            <img src="user.jpg" alt="User 5" class="user-avatar">
+          </div>
+          <div class="user-info">
+            <div class="user-name-row">
+              <h3 class="user-name">David Rodriguez</h3>
+              <span class="message-time">Mon</span>
+            </div>
+            <p class="last-message">Did you see the latest post? It's getting a lot of attention!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Bottom Navigation Bar -->
+<nav class="bottom-nav">
+  <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+  <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+  <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+  <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notifications"></a>
+  <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+  <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+</nav>
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

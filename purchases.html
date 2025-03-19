@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your 1  Purchased Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="purchased-content">
+        <h2>Your Purchased Content</h2>
+        <p>View and manage your purchased items and messages</p>
+
+        <div class="tabs">
+            <button class="tab active">Feed Items</button>
+            <button class="tab">Chat Messages</button>
+        </div>
+
+        <div class="content-area">
+            <div class="no-content">
+                <p>No purchased feed items yet.</p>
+                <p>You haven't purchased any feed items yet. Explore our content to find something you like!</p>
+            </div>
+        </div>
+    </div>
+    <style>body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .purchased-content {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .tab {
+        padding: 10px 15px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .tab.active {
+        background-color: #ddd;
+        border-bottom: none;
+    }
+    
+    .content-area {
+        padding: 20px;
+    }
+    
+    .no-content {
+        text-align: center;
+    }
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+ max-width: 980px;
+ height: 100px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bottom-nav .nav-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bottom-nav .nav-item:hover {
+    color: #000;
+  }
+</style>
+   <!-- Bottom Navigation Bar -->
+ <nav class="bottom-nav">
+    <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+    <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+    <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+    <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notification"></a>
+    <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+    <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+</nav>
+<style>
+      /* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Ensures it starts from the left edge */
+  width: 100%; /* Forces it to span the full width of the viewport */
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensures it stays above other elements */
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.nav-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+</style>
+
+</body>
+</html>

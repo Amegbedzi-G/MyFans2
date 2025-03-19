@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFans - Social Media Platform</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="top-nav">
+      <h2 class="logo">MyFans</h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="feed">
+      <!-- Stories Section -->
+      <div class="story-container">
+        <div class="stories">
+          <!-- Create Story -->
+          <div class="story create-story" onclick="triggerFileInput()">
+            <label for="story-file-input" class="story-label">
+              <div class="add-story">
+                <span class="plus">+</span>
+                <p>Story</p>
+              </div>
+            </label>
+            <input
+              id="story-file-input"
+              type="file"
+              name="media"
+              accept="image/*,video/*"
+              style="display: none;"
+              onchange="previewStory(event)">
+          </div>
+          <!-- Posted Stories -->
+          <div id="posted-stories" class="posted-stories"></div>
+          
+          <!-- Sample Stories -->
+          <div class="story">
+            <div class="story-avatar">
+              <img src="profile1.jpg" alt="User 1">
+            </div>
+            <p>User 1</p>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="profile2.jpg" alt="User 2">
+            </div>
+            <p>User 2</p>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="profile5.jpg" alt="User 3">
+            </div>
+            <p>User 3</p>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="profile4.jpg" alt="User 4">
+            </div>
+            <p>User 4</p>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="profile3.jpg" alt="User 5">
+            </div>
+            <p>User 5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="input-bar">
+        <img src="profile4.jpg" alt="Profile" class="profile-pic">
+        <input type="text" placeholder="What's on your mind?" class="text-input" id="post-text">
+        <div class="post-actions">
+          <label for="fileInput" class="file-label">
+            <span class="file-icon">📷</span>
+            <span>Photo</span>
+          </label>
+          <input type="file" accept="image/*,video/*" id="fileInput" name="media" style="display: none;" onchange="previewPost(event)">
+          <button class="post-btn" onclick="createPost()">Post</button>
+        </div>
+      </div>
+      
+      <!-- Preview Area -->
+      <div id="post-preview" class="post-preview" style="display: none;">
+        <img id="preview-image" src="/placeholder.svg" alt="Preview">
+        <button class="remove-preview" onclick="removePreview()">✕</button>
+      </div>
+
+      <!-- Posts Feed -->
+      <div id="posts-container">
+        <div class="post">
+          <div class="post-header">
+            <img src="profile3.jpg" alt="User" class="user-avatar">
+            <p class="username">
+              Willian Sarah
+              <img src="verification.png" alt="Verified" class="verification-icon">
+            </p>
+            <div class="post-header-buttons">
+              <button class="delete-btn" onclick="deleteItem(1)">
+                <span class="delete-icon"><img src="delete.png" alt=""></span>
+                <span></span>
+              </button>
+              <button class="option-btn" onclick="toggleOptions(1)">
+                <span class="option-icon" style="transform: rotate(90deg);font-size: 20px;">⋮</span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <img src="profile4.jpg" alt="Post Image" class="post-image">
+          <div class="post-actions-container">
+            <button class="action-btn like-btn">
+              <img src="heart.png" alt="Like" class="icon"> Like
+            </button>
+            <button class="action-btn comment-btn">
+              <img src="chat.png" alt="Comment" class="icon"> Comment
+            </button>
+            <button class="action-btn share-btn">
+              <img src="search.png" alt="Share" class="icon"> Share
+            </button>
+            <button class="action-btn tip-btn">
+              <img src="chat.png" alt="Tip" class="icon"> Tip
+            </button>
+          </div>
+          <p class="likes">767 likes</p>
+          <p class="caption"><strong>Willian Sarah</strong> A beautiful sunset! 🌅</p>
+          
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comment">
+              <img src="chat.png" alt="Commenter" class="comment-avatar">
+              <div class="comment-content">
+                <p class="comment-username">John Doe</p>
+                <p class="comment-text">Beautiful photo!</p>
+              </div>
+            </div>
+            <div class="add-comment">
+              <img src="chat.png" alt="Your Avatar" class="comment-avatar">
+              <input type="text" placeholder="Add a comment..." class="comment-input">
+              <button class="post-comment-btn">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Posts Feed -->
+<div id="posts-container">
+  <div class="post">
+    <div class="post-header">
+      <img src="profile1.jpg" alt="User" class="user-avatar">
+      <p class="username">
+        Willian Sarah
+        <img src="verification.png" alt="Verified" class="verification-icon">
+      </p>
+      <div class="post-header-buttons">
+        <button class="delete-btn" onclick="deleteItem(1)">
+          <span class="delete-icon"><img src="delete.png" alt=""></span>
+          <span></span>
+        </button>
+        <button class="option-btn" onclick="toggleOptions(1)">
+          <span class="option-icon" style="transform: rotate(90deg);font-size: 20px;">⋮</span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <img src="profile3.jpg" alt="Post Image" class="post-image">
+    <div class="post-actions-container">
+      <button class="action-btn like-btn">
+        <img src="heart.png" alt="Like" class="icon"> Like
+      </button>
+      <button class="action-btn comment-btn">
+        <img src="chat.png" alt="Comment" class="icon"> Comment
+      </button>
+      <button class="action-btn share-btn">
+        <img src="search.png" alt="Share" class="icon"> Share
+      </button>
+      <button class="action-btn tip-btn">
+        <img src="chat.png" alt="Tip" class="icon"> Tip
+      </button>
+    </div>
+    <p class="likes">767 likes</p>
+    <p class="caption"><strong>Willian Sarah</strong> A beautiful sunset! 🌅</p>
+    
+    <!-- Comments Section -->
+    <div class="comments-section">
+      <div class="comment">
+        <img src="chat.png" alt="Commenter" class="comment-avatar">
+        <div class="comment-content">
+          <p class="comment-username">John Doe</p>
+          <p class="comment-text">Beautiful photo!</p>
+        </div>
+      </div>
+      <div class="add-comment">
+        <img src="chat.png" alt="Your Avatar" class="comment-avatar">
+        <input type="text" placeholder="Add a comment..." class="comment-input">
+        <button class="post-comment-btn">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a href="main.html" class="nav-item"><img src="home.png" alt="Home"></a>
+      <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"></a>
+      <a href="search.html" class="nav-item"><img src="search.png" alt="Search"></a>
+      <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notifications"></a>
+      <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"></a>
+      <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"></a>
+    </nav>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,244 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    padding-bottom: 70px; /* Space for bottom nav */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Registration Section */
+.card-registration {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+input.error {
+    border-color: #f44336;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #777;
+    font-size: 12px;
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.2s ease;
+    margin-bottom: 4px;
+}
+
+.nav-item:hover img, .nav-item.active img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #4CAF50;
+}
+
+.nav-item span {
+    display: none;
+}
+
+/* Responsive Design */
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .card-registration {
+        padding: 40px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .bottom-nav {
+        height: 70px;
+    }
+    
+    .nav-item img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .nav-item span {
+        display: block;
+    }
+}
+
+/* Mobile - Small */
+@media screen and (max-width: 480px) {
+    .card-registration {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .bottom-nav {
+        height: 50px;
+    }
+    
+    .nav-item img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+    }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+    .card-registration {
+        max-width: 700px;
+        padding: 50px;
+    }
+    
+    .bottom-nav {
+        height: 80px;
+    }
+    
+    .nav-item img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .nav-item {
+        font-size: 14px;
+    }
+}

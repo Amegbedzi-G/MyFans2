@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a Card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>  
+    <div class="container">
+        <div class="card-registration">
+            <h2>Register a Card</h2>
+            <p>Add a new payment card to your account.</p>
+            <form id="card-form">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="Enter card number" required maxlength="19">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiration-date">Expiration Date</label>
+                        <input type="text" id="expiration-date" placeholder="MM/YY" required maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="Enter CVV" required maxlength="4">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-holder">Card Holder Name</label>
+                    <input type="text" id="card-holder" placeholder="Enter name on card" required>
+                </div>
+                <button type="submit">Register Card</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="main.html" class="nav-item"><img src="home.png" alt="Home"><span>Home</span></a>
+        <a href="create.html" class="nav-item"><img src="plus.png" alt="Create"><span>Create</span></a>
+        <a href="search.html" class="nav-item"><img src="search.png" alt="Search"><span>Search</span></a>
+        <a href="notification.html" class="nav-item"><img src="bell.png" alt="Notification"><span>Alerts</span></a>
+        <a href="messages.html" class="nav-item"><img src="message.png" alt="Messages"><span>Messages</span></a>
+        <a href="setting.html" class="nav-item"><img src="setting.png" alt="Settings"><span>Settings</span></a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
