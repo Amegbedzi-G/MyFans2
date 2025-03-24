@@ -15,11 +15,9 @@ My Fan is a minimalist social media platform where users can sign up, log in, an
 
  🛠 Tech Stack
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: *(Mention if you have a backend, e.g., Node.js, Firebase, or any API services used)*
+- **Backend**: *(working on it using next.js)*
 - **Hosting**: [Netlify](https://www.netlify.com/)
 
-## 📸 Screenshots
-*(Include some screenshots of your website to showcase the UI)*
 
 ## 🚀 Getting Started
 If you'd like to explore or contribute to My Fan, follow these steps:
