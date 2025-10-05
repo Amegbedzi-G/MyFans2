@@ -1,0 +1,20 @@
+<div id="nav-placeholder"></div>
+<div class="home-container">
+    <main>
+        <section class="create-post">
+            <h2>Create a Post</h2>
+            <form id="create-post-form">
+                <textarea name="caption" placeholder="What's on your mind?"></textarea>
+                <input type="text" name="media_url" placeholder="Image/Video URL" required>
+                <select name="media_type">
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                </select>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+        <section class="post-feed" id="post-feed">
+            <!-- Posts will be loaded here -->
+        </section>
+    </main>
+</div>
