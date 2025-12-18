@@ -24,7 +24,7 @@ If you'd like to explore or contribute to My Fan, follow these steps:
 
 ```sh
 # Clone the repository
-git clone https://github.com/Amegbedzi-G/my-fan.git
+git clone https://github.com/Amegbedzi-G/MyFans2.git
 
 # Navigate to project directory
 cd my-fan
